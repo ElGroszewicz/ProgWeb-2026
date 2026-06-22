@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sobre = document.querySelector("footer")
 
-    fetch('public/sobre.json')
+    fetch('/sobre.json')
         .then(response => response.json())
         .then(dados => {
             sobre.innerHTML = `
