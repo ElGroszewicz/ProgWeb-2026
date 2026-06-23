@@ -1,12 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sobre = document.querySelector("footer")
 
-    fetch('/sobre.json')
-        .then(response => response.json())
-        .then(dados => {
-            sobre.innerHTML = `
-                <p>Desenvolvido por ${dados.autor}, em ${dados.data}.</p>
-                <p>Contatos: ${dados.contatos[0]}</p>
-            `
-        })
+    sobre.innerHTML = `
+        <p>Desenvolvido por Lucas Creuz Groszewicz, em Junho de 2026.</p>
+        <p>Contatos: lukegros@tutanota.com</p>
+    `
 })

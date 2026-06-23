@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Professores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo.titulo">
+            <img src="img/logo.png" alt="Instituto Federal Catarinense" class="logo">
+            <h1>Cadastro de Professores</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="cursos.html">Cadastro de Cursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button id="addProfessor">Adicionar Professor</button>
+        <table id="professoresTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+    <div id="professorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Adicionar/Editar Professor</h2>
+            <form id="professorForm">
+                <input type="hidden" id="codigoProfessor" name="codigoProfessor" required>
+                <label for="nomeProfessor">Nome do Professor:</label>
+                <input type="text" id="nomeProfessor" name="nomeProfessor" required>
+                <label for="emailProfessor">E-mail:</label>
+                <input type="email" id="emailProfessor" name="emailProfessor" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+    <script src="professores.js"></script>
+</body>
+</html>

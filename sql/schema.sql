@@ -200,6 +200,7 @@ ALTER TABLE ONLY public.usuario ALTER COLUMN id SET DEFAULT nextval('public.usua
 COPY public.cursos (id, sigla, descricao, id_coordenador, nome) FROM stdin;
 1	TSI	O curso de Tecnologia em Sistemas para Internet na modalidade EAD foi pensado no intuito   de formar profissionais para o mundo do trabalho que estejam aptos a  desenvolver, analisar, projetar, especificar, documentar, e manter sistemas de  informação voltados à utilização destes em rede, e, adaptáveis aos mais diversos dispositivos disponíveis e utilizados nas diferentes organizações, sob os princípios da ética, técnica, com uma visão criativa e humanista, com perfil cidadão, responsável, empreendedor e crítico.	4	Tecnologia em Sistemas para Internet
 2	BSI	O Curso de Sistemas de Informação tem seu foco voltado para a formação do profissional que irá desenvolver ou gerenciar sistemas aplicativos. Forma profissionais aptos ao planejamento, aquisição e gerenciamento de serviços e recursos da Tecnologia da Informação e Computação, aplicados ao desenvolvimento e à evolução de sistemas e infraestruturas de automatização dos processos organizacionais.	5	Bacharelado em Sistemas de Informação
+3	AGRO	O curso de Bacharel em Agronomia tem por objetivo formar Engenheiros Agrônomos com forte base técnico-científica e responsabilidade social. Esta formação deve vir acompanhada de princípios que promovam o respeito à fauna e à flora; a conservação e recuperação da qualidade do solo, do ar e da água; o uso tecnológico racional e manejo integrado e sustentável do ambiente; emprego de raciocínio reflexivo, crítico e criativo; atendimento às expectativas humanas e sociais no exercício da atividade profissional, além de compromisso permanente com a educação ambiental e a educação étnico-racial e de gênero.	6	Bacharelado em Agronomia
 \.
 
 
@@ -219,6 +220,7 @@ COPY public.professor (id, nome, email) FROM stdin;
 1	Rafael de Moura Speroni	rafael.speroni@ifc.edu.br
 4	Joice Mota	joice.mota@ifc.edu.br
 5	Aujor Andrade	aujor.andrade@ifc.edu.br
+6	Alan	\N
 \.
 
 
@@ -234,7 +236,7 @@ COPY public.usuario (id, nome, email, senha) FROM stdin;
 -- Name: cursos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.cursos_id_seq', 2, true);
+SELECT pg_catalog.setval('public.cursos_id_seq', 3, true);
 
 
 --
@@ -248,7 +250,7 @@ SELECT pg_catalog.setval('public.disciplina_id_seq', 1, false);
 -- Name: professor_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.professor_id_seq', 5, true);
+SELECT pg_catalog.setval('public.professor_id_seq', 6, true);
 
 
 --
